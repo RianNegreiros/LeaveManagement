@@ -13,7 +13,7 @@ namespace departments.Controllers
         {
             List<Department> list = new List<Department>();
             HttpClient client = new HttpClient();
-            HttpResponseMessage responseMessage = await client.GetAsync("http://localhost:5001/api/department");
+            HttpResponseMessage responseMessage = await client.GetAsync("https://localhost:7249/api/departments");
 
             if (responseMessage.IsSuccessStatusCode)
             {

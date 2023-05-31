@@ -15,7 +15,7 @@ namespace departments.Controllers
         {
             List<Salary> list = new List<Salary>();
             HttpClient client = new HttpClient();
-            HttpResponseMessage responseMessage = await client.GetAsync("http://localhost:5001/api/salaries");
+            HttpResponseMessage responseMessage = await client.GetAsync("http://localhost:7249/api/salaries");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jstring = await responseMessage.Content.ReadAsStringAsync();

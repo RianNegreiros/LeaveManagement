@@ -13,7 +13,7 @@ namespace departments.Controllers
         public async Task<IActionResult> Index()
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage responseMessage = await client.GetAsync("http://localhost:5001/api/persons");
+            HttpResponseMessage responseMessage = await client.GetAsync("http://localhost:7249/api/persons");
 
             if (responseMessage.IsSuccessStatusCode)
             {
