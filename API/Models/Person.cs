@@ -18,8 +18,14 @@ namespace API.Models
     [Required]
     public string Password { get; set; }
     public string Address { get; set; }
+
     [ForeignKey("Position")]
     public int PositionId { get; set; }
     public Position Position { get; set; }
+
+    [ForeignKey("Salary")]
+    public int SalaryId { get; set; }
+    public Salary Salary { get; set; }
+
   }
 }
