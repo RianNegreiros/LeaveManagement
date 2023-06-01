@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using departments.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Newtonsoft.Json;
 
 namespace departments.Controllers
@@ -38,6 +39,47 @@ namespace departments.Controllers
         var jsonperson = JsonConvert.SerializeObject(person);
         StringContent content = new StringContent(jsonperson, Encoding.UTF8, "application/json");
         HttpResponseMessage message = await client.PostAsync("http://localhost:7249/api/persons", content);
+        if (message.IsSuccessStatusCode)
+        {
+          return RedirectToAction("Index");
+        }
+        else
+        {
+          ModelState.AddModelError("Error", "API Error");
+          return View(person);
+        }
+      }
+      else
+      {
+        return View(person);
+      }
+    }
+    public async Task<IActionResult> Update(int Id)
+    {
+      HttpClient client = new HttpClient();
+      HttpResponseMessage message = await client.GetAsync("http://localhost:7249/api/persons/" + Id);
+
+      if (message.IsSuccessStatusCode)
+      {
+        var jstring = await message.Content.ReadAsStringAsync();
+        Person person = JsonConvert.DeserializeObject<Person>(jstring);
+        return View(person);
+      }
+      else
+      {
+        return RedirectToAction("Add");
+      }
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Update(Person person)
+    {
+      if (ModelState.IsValid)
+      {
+        HttpClient client = new HttpClient();
+        var jsonperson = JsonConvert.SerializeObject(person);
+        StringContent content = new StringContent(jsonperson, Encoding.UTF8, "application/json");
+        HttpResponseMessage message = await client.PutAsync("http://localhost:7249/api/persons/", content);
         if (message.IsSuccessStatusCode)
         {
           return RedirectToAction("Index");
