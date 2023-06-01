@@ -29,6 +29,7 @@ namespace departments.Controllers
       return View(person);
     }
 
+    [HttpPost]
     public async Task<IActionResult> Add(Person person)
     {
       if (ModelState.IsValid)

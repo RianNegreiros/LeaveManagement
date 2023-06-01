@@ -30,6 +30,7 @@ namespace departments.Controllers
       return View(department);
     }
 
+    [HttpPost]
     public async Task<IActionResult> Add(Department department)
     {
       if (ModelState.IsValid)
@@ -73,26 +74,26 @@ namespace departments.Controllers
     [HttpPost]
     public async Task<IActionResult> Update(Department department)
     {
-        if (ModelState.IsValid)
+      if (ModelState.IsValid)
+      {
+        HttpClient client = new HttpClient();
+        var jsondepartment = JsonConvert.SerializeObject(department);
+        StringContent content = new StringContent(jsondepartment, Encoding.UTF8, "application/json");
+        HttpResponseMessage message = await client.PutAsync("http://localhost:7249/api/departments/" + department.DepartmentId, content);
+        if (message.IsSuccessStatusCode)
         {
-            HttpClient client = new HttpClient();
-            var jsondepartment = JsonConvert.SerializeObject(department);
-            StringContent content = new StringContent(jsondepartment, Encoding.UTF8, "application/json");
-            HttpResponseMessage message = await client.PutAsync("http://localhost:7249/api/departments/" + department.DepartmentId, content);
-            if (message.IsSuccessStatusCode)
-            {
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                ModelState.AddModelError("Error", "API Error");
-                return View(department);
-            }
+          return RedirectToAction("Index");
         }
         else
         {
-            return View(department);
+          ModelState.AddModelError("Error", "API Error");
+          return View(department);
         }
+      }
+      else
+      {
+        return View(department);
+      }
     }
   }
 }
