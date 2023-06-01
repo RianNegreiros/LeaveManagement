@@ -7,7 +7,7 @@ namespace API.Persistence
   {
     public DbSet<Person> Persons { get; set; }
     public DbSet<Position> Positions { get; set; }
-
+    public DbSet<Department> Departments { get; set; }
     public ApiDbContext(DbContextOptions<ApiDbContext> options)
         : base(options)
     {
