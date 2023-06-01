@@ -27,5 +27,6 @@ namespace API.Models
     public int SalaryId { get; set; }
     public Salary Salary { get; set; }
 
+    public virtual PersonDetail PersonDetail { get; set; }
   }
 }
