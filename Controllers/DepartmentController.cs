@@ -53,5 +53,46 @@ namespace departments.Controllers
         return View(department);
       }
     }
+
+    public async Task<IActionResult> Update(int Id)
+    {
+      HttpClient client = new HttpClient();
+      HttpResponseMessage message = await client.GetAsync("http://localhost:7249/api/departments/" + Id);
+      if (message.IsSuccessStatusCode)
+      {
+        var jstring = await message.Content.ReadAsStringAsync();
+        Department department = JsonConvert.DeserializeObject<Department>(jstring);
+        return View(department);
+      }
+      else
+      {
+        return RedirectToAction("Add");
+      }
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Update(Department department)
+    {
+        if (ModelState.IsValid)
+        {
+            HttpClient client = new HttpClient();
+            var jsondepartment = JsonConvert.SerializeObject(department);
+            StringContent content = new StringContent(jsondepartment, Encoding.UTF8, "application/json");
+            HttpResponseMessage message = await client.PutAsync("http://localhost:7249/api/departments/" + department.DepartmentId, content);
+            if (message.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ModelState.AddModelError("Error", "API Error");
+                return View(department);
+            }
+        }
+        else
+        {
+            return View(department);
+        }
+    }
   }
 }
