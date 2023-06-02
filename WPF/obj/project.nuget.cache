@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RoJ3fGrfAfHWqVaPKjT9AVMwXhctI4m1EHgffRTzXlFngYBip5vyhHzwtHhb5iboSakd0lqR2g9F0BKrr64mmQ==",
+  "success": true,
+  "projectFilePath": "/home/riann/dev/departments/WPF/WPF.csproj",
+  "expectedPackageFiles": [
+    "/home/riann/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.16/microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
