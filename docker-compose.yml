@@ -14,9 +14,9 @@ services:
       - "./mssql/log/:/var/opt/mssql/log/"
       - "./mssql/secrets/:/var/opt/mssql/secrets/"
 
-  webapi:
+  api:
     build:
-      context: .
+      context: ./API
       dockerfile: Dockerfile
     depends_on:
       - db
@@ -27,3 +27,17 @@ services:
       Database: "master"
     ports: 
       - "5001:80"
+
+  mvc:
+    build:
+      context: ./MVC
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    environment:
+      DbPort: "1433"
+      DbUser: "SA"
+      Password: "yourStrong(!)Password"
+      Database: "master"
+    ports: 
+      - "5002:80"
