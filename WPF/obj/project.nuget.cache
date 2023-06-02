@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "zWSVI64IMITPPQlYdmWCSKQ6/KxtddICRn2/9qiBh5BhA4PUf8gtBV6IGo7YMijrUP2x6VYSPu8IoSuwcOsWug==",
+  "dgSpecHash": "JH1BR8CdE9aDc9ORtCrvqsyox1Pn4bKpqcD9yqGDyTc0vAZ3szLi4uxL2GDyIL2rz2+FnLEOtaZo0PdMh6umSw==",
   "success": true,
-  "projectFilePath": "\\\\wsl.localhost\\Arch\\home\\riann\\dev\\departments\\WPF\\WPF.csproj",
+  "projectFilePath": "/home/riann/dev/departments/WPF/WPF.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\riann\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "/home/riann/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/home/riann/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.16/microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
   ],
   "logs": []
 }
