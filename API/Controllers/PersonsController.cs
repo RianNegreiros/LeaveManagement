@@ -47,5 +47,18 @@ namespace API.Controllers
 
       return Ok(person);
     }
+
+    [HttpPost]
+    public IActionResult CreatePerson([FromBody] Person person)
+    {
+      if (!ModelState.IsValid)
+      {
+        return BadRequest(ModelState);
+      }
+
+      _context.Persons.Add(person);
+      _context.SaveChanges();
+      return Created("api/persons/" + person.Id, person);
+    }
   }
 }

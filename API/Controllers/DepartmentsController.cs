@@ -1,3 +1,4 @@
+using API.Models;
 using API.Persistence;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,6 +32,19 @@ namespace API.Controllers
       }
 
       return Ok(department);
+    }
+
+    [HttpPost]
+    public IActionResult CreateDepartment([FromBody] Department department)
+    {
+      if (!ModelState.IsValid)
+      {
+        return BadRequest(ModelState);
+      }
+
+      _context.Departments.Add(department);
+      _context.SaveChanges();
+      return Created("api/departments/" + department.DepartmentId, department);
     }
   }
 }
