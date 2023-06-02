@@ -1,0 +1,6 @@
+\\wsl.localhost\Arch\home\riann\dev\departments\WPF\obj\Debug\net6.0-windows\WPF.csproj.AssemblyReference.cache
+\\wsl.localhost\Arch\home\riann\dev\departments\WPF\obj\Debug\net6.0-windows\DepartmentPage.g.cs
+\\wsl.localhost\Arch\home\riann\dev\departments\WPF\obj\Debug\net6.0-windows\MainWindow.g.cs
+\\wsl.localhost\Arch\home\riann\dev\departments\WPF\obj\Debug\net6.0-windows\App.g.cs
+\\wsl.localhost\Arch\home\riann\dev\departments\WPF\obj\Debug\net6.0-windows\WPF_MarkupCompile.cache
+\\wsl.localhost\Arch\home\riann\dev\departments\WPF\obj\Debug\net6.0-windows\WPF_MarkupCompile.lref

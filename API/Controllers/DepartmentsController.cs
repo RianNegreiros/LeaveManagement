@@ -65,5 +65,19 @@ namespace API.Controllers
       _context.SaveChanges();
       return Ok(departmentInDb);
     }
+
+    [HttpDelete("{id}")]
+    public IActionResult DeleteDepartment(int id)
+    {
+      var departmentInDb = _context.Departments.Find(id);
+      if (departmentInDb == null)
+      {
+        return NotFound();
+      }
+
+      _context.Departments.Remove(departmentInDb);
+      _context.SaveChanges();
+      return Ok(departmentInDb);
+    }
   }
 }
