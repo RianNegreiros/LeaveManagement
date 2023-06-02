@@ -60,5 +60,32 @@ namespace API.Controllers
       _context.SaveChanges();
       return Created("api/persons/" + person.Id, person);
     }
+
+    [HttpPut("{id}")]
+    public IActionResult UpdatePerson(int id, [FromBody] Person person)
+    {
+      if (!ModelState.IsValid)
+      {
+        return BadRequest(ModelState);
+      }
+
+      var personInDb = _context.Persons.Find(id);
+      if (personInDb == null)
+      {
+        return NotFound();
+      }
+
+      personInDb.Name = person.Name;
+      personInDb.Surname = person.Surname;
+      personInDb.Age = person.Age;
+      personInDb.Email = person.Email;
+      personInDb.Password = person.Password;
+      personInDb.Address = person.Address;
+      personInDb.PositionId = person.PositionId;
+      personInDb.SalaryId = person.SalaryId;
+
+      _context.SaveChanges();
+      return Ok(personInDb);
+    }
   }
 }

@@ -46,5 +46,24 @@ namespace API.Controllers
       _context.SaveChanges();
       return Created("api/departments/" + department.DepartmentId, department);
     }
+
+    [HttpPut("{id}")]
+    public IActionResult UpdateDepartment(int id, [FromBody] Department department)
+    {
+      if (!ModelState.IsValid)
+      {
+        return BadRequest(ModelState);
+      }
+
+      var departmentInDb = _context.Departments.Find(id);
+      if (departmentInDb == null)
+      {
+        return NotFound();
+      }
+
+      departmentInDb.DepartmentName = department.DepartmentName;
+      _context.SaveChanges();
+      return Ok(departmentInDb);
+    }
   }
 }
