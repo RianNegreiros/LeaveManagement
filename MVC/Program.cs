@@ -17,6 +17,10 @@ builder.Services.AddAuthentication().AddFacebook(x =>
 {
   x.AppId = builder.Configuration["Facebook:AppId"];
   x.AppSecret = builder.Configuration["Facebook:AppSecret"];
+}).AddGoogle(x =>
+{
+  x.ClientId = builder.Configuration["Google:ClientId"];
+  x.ClientSecret = builder.Configuration["Google:ClientSecret"];
 });
 
 var app = builder.Build();
