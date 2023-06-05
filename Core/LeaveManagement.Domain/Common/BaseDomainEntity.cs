@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LeaveManagement.Domain.Common
 {
-  public class BaseDomainEntity
+  public abstract class BaseDomainEntity
   {
     public int Id { get; set; }
     public int NumberOfDays { get; set; }
