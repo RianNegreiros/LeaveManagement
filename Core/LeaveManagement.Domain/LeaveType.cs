@@ -1,4 +1,4 @@
-using System;
+using LeaveManagement.Domain.Common;
 
 namespace LeaveManagement.Domain
 {
