@@ -1,11 +1,8 @@
-using LeaveManagement.Application.Contracts.Persistence;
+using LeaveManagement.Application.Persistence.Contracts;
 using LeaveManagement.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LeaveManagement.Persistence
 {
@@ -16,6 +13,7 @@ namespace LeaveManagement.Persistence
       services.AddDbContext<LeaveManagementDbContext>(options =>
          options.UseSqlServer(
              configuration.GetConnectionString("LeaveManagementConnectionString")));
+
 
       services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
