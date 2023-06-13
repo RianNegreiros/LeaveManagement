@@ -1,6 +1,3 @@
-using LeaveManagement.Application.DTOs.Common;
-using LeaveManagement.Application.DTOs.LeaveAllocation;
-
 namespace LeaveManagement.Application.DTOs.LeaveAllocation
 {
   public class CreateLeaveAllocationDto : ILeaveAllocationDto

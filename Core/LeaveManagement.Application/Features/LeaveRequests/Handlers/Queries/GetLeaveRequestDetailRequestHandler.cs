@@ -1,20 +1,12 @@
 using AutoMapper;
-using LeaveManagement.Application.DTOs;
 using LeaveManagement.Application.DTOs.LeaveRequest;
-using LeaveManagement.Application.Features.LeaveRequests.Requests.Queries;
-using LeaveManagement.Application.Features.LeaveTypes.Requests;
 using LeaveManagement.Application.Features.LeaveTypes.Requests.Queries;
 using LeaveManagement.Application.Persistence.Contracts;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace LeaveManagement.Application.Features.LeaveRequests.Queries
 {
-  public class GetLeaveRequestDetailsRequestHandler : IRequestHandler<GetLeaveRequestDetailRequest, LeaveRequestDto>
+  public class GetLeaveRequestDetailRequestHandler : IRequestHandler<GetLeaveRequestDetailRequest, LeaveRequestDto>
   {
     private readonly ILeaveRequestRepository _leaveRequestRepository;
     private readonly IMapper _mapper;

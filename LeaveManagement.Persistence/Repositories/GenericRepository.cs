@@ -1,9 +1,5 @@
-﻿using LeaveManagement.Application.Contracts.Persistence;
+﻿using LeaveManagement.Application.Persistence.Contracts;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeaveManagement.Persistence.Repositories
 {

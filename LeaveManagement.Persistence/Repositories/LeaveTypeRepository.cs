@@ -1,8 +1,5 @@
-using LeaveManagement.Application.Contracts.Persistence;
+using LeaveManagement.Application.Persistence.Contracts;
 using LeaveManagement.Domain;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LeaveManagement.Persistence.Repositories
 {

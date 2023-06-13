@@ -1,11 +1,7 @@
 using LeaveManagement.Domain;
 using LeaveManagement.Domain.Common;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+
 namespace LeaveManagement.Persistence
 {
   public class LeaveManagementDbContext : DbContext
@@ -16,14 +12,14 @@ namespace LeaveManagement.Persistence
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-      modelBuilder.ApplyConfigurationFromAssembly(typeof(LeaveManagementDbContext).Assembly);
+      modelBuilder.ApplyConfigurationsFromAssembly(typeof(LeaveManagementDbContext).Assembly);
     }
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
-      foreach (var entry in ChangeTracker.Entries<BaseEntityDomain>())
+      foreach (var entry in ChangeTracker.Entries<BaseDomainEntity>())
       {
-        entry.Entity.LastModified = DateTime.Now;
+        entry.Entity.LastModifiedDate = DateTime.Now;
 
         if (entry.State == EntityState.Added)
         {

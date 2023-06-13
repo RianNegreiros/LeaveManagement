@@ -1,12 +1,8 @@
-using System;
 using MediatR;
 using AutoMapper;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using LeaveManagement.Application.DTOs;
 using LeaveManagement.Application.Persistence.Contracts;
 using LeaveManagement.Application.Features.LeaveTypes.Requests.Queries;
+using LeaveManagement.Application.DTOs.LeaveType;
 
 namespace LeaveManagement.Application.Features.LeaveTypes.Handlers.Queries
 {
