@@ -3,13 +3,7 @@ using LeaveManagement.Application.DTOs.LeaveType.Validators;
 using LeaveManagement.Application.Exceptions;
 using LeaveManagement.Application.Features.LeaveTypes.Requests.Commands;
 using LeaveManagement.Application.Persistence.Contracts;
-using LeaveManagement.Domain;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace LeaveManagement.Application.Features.LeaveTypes.Handlers.Commands
 {

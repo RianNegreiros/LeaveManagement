@@ -1,6 +1,4 @@
 using LeaveManagement.Domain;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 
 namespace LeaveManagement.Application.Persistence.Contracts
 {

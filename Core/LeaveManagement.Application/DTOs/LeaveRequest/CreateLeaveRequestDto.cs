@@ -1,6 +1,3 @@
-using System;
-using LeaveManagement.Application.DTOs.Common;
-
 namespace LeaveManagement.Application.DTOs.LeaveRequest
 {
   public class CreateLeaveRequestDto : ILeaveRequestDto

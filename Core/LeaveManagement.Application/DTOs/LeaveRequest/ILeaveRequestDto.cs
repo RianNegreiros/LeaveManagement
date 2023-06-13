@@ -1,5 +1,3 @@
-using System;
-
 namespace LeaveManagement.Application.DTOs.LeaveRequest
 {
   public interface ILeaveRequestDto

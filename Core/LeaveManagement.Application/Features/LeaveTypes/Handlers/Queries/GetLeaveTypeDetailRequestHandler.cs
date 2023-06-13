@@ -3,6 +3,7 @@ using LeaveManagement.Application.DTOs.LeaveType;
 using LeaveManagement.Application.Features.LeaveTypes.Requests.Queries;
 using LeaveManagement.Application.Persistence.Contracts;
 using MediatR;
+
 namespace LeaveManagement.Application.Features.LeaveTypes.Handlers.Queries
 {
   public class GetLeaveTypeDetailRequestHandler : IRequestHandler<GetLeaveTypeDetailRequest, LeaveTypeDto>

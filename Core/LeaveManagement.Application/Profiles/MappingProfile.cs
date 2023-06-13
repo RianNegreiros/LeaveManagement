@@ -1,12 +1,8 @@
 using AutoMapper;
-using LeaveManagement.Application.DTOs;
 using LeaveManagement.Application.DTOs.LeaveAllocation;
 using LeaveManagement.Application.DTOs.LeaveRequest;
 using LeaveManagement.Application.DTOs.LeaveType;
 using LeaveManagement.Domain;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LeaveManagement.Application.Profiles
 {
