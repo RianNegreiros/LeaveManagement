@@ -5,15 +5,17 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C6429758-FE1B-42B8-987C-28EA831C67A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Domain", "Core\LeaveManagement.Domain\LeaveManagement.Domain.csproj", "{A980C12B-D3AD-469B-9C06-579B12C0D1AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Domain", "LeaveManagement.Domain\LeaveManagement.Domain.csproj", "{A980C12B-D3AD-469B-9C06-579B12C0D1AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Application", "Core\LeaveManagement.Application\LeaveManagement.Application.csproj", "{EE79C6C0-8805-4879-819A-B9D125FE9860}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Application", "LeaveManagement.Application\LeaveManagement.Application.csproj", "{EE79C6C0-8805-4879-819A-B9D125FE9860}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Infrastructure", "LeaveManagement.Infrastructure\LeaveManagement.Infrastructure.csproj", "{BC9AFC6F-1D11-42E6-A720-45548B92D314}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Persistence", "LeaveManagement.Persistence\LeaveManagement.Persistence.csproj", "{F134B56C-7A61-42A7-8006-43AF6FABC5B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.API", "LeaveManagement.API\LeaveManagement.API.csproj", "{1B626500-7257-40B6-9B22-4471FE651ABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Test", "LeaveManagement.Test\LeaveManagement.Test.csproj", "{FE46D067-8522-4724-B366-CD86BB5884EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{1B626500-7257-40B6-9B22-4471FE651ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B626500-7257-40B6-9B22-4471FE651ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B626500-7257-40B6-9B22-4471FE651ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE46D067-8522-4724-B366-CD86BB5884EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE46D067-8522-4724-B366-CD86BB5884EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE46D067-8522-4724-B366-CD86BB5884EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE46D067-8522-4724-B366-CD86BB5884EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A980C12B-D3AD-469B-9C06-579B12C0D1AC} = {C6429758-FE1B-42B8-987C-28EA831C67A7}

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Core\LeaveManagement.Application\LeaveManagement.Application.csproj" />
+    <ProjectReference Include="..\LeaveManagement.Application\LeaveManagement.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
