@@ -26,6 +26,7 @@ namespace LeaveManagement.Identity
           .AddEntityFrameworkStores<LeaveManagementIdentityDbContext>().AddDefaultTokenProviders();
 
       services.AddTransient<IAuthService, AuthService>();
+      services.AddTransient<IUserService, UserService>();
 
       services.AddAuthentication(options =>
       {
