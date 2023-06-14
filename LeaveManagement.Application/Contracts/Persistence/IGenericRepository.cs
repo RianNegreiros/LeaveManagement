@@ -1,4 +1,4 @@
-namespace LeaveManagement.Application.Persistence.Contracts
+namespace LeaveManagement.Application.Contracts.Persistence
 {
   public interface IGenericRepository<T> where T : class
   {

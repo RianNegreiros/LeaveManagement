@@ -1,11 +1,11 @@
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
+using LeaveManagement.Application.Contracts.Persistence;
 using LeaveManagement.Application.DTOs.LeaveType;
 using LeaveManagement.Application.Exceptions;
 using LeaveManagement.Application.Features.LeaveTypes.Handlers.Commands;
 using LeaveManagement.Application.Features.LeaveTypes.Requests.Commands;
-using LeaveManagement.Application.Persistence.Contracts;
 using LeaveManagement.Application.Profiles;
 using LeaveManagement.Test.Mocks;
 using Moq;

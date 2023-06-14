@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using LeaveManagement.Application.Persistence.Contracts;
+using LeaveManagement.Application.Contracts.Persistence;
 using LeaveManagement.Domain;
 using Moq;
 

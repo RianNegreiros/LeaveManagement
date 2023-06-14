@@ -1,7 +1,7 @@
 using AutoMapper;
+using LeaveManagement.Application.Contracts.Persistence;
 using LeaveManagement.Application.DTOs.LeaveAllocation;
 using LeaveManagement.Application.Features.LeaveAllocations.Requests.Queries;
-using LeaveManagement.Application.Persistence.Contracts;
 using MediatR;
 
 namespace LeaveManagement.Application.Features.LeaveAllocations.Handlers.Queries
