@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.API", "Leav
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Test", "LeaveManagement.Test\LeaveManagement.Test.csproj", "{FE46D067-8522-4724-B366-CD86BB5884EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Identity", "LeaveManagement.Identity\LeaveManagement.Identity.csproj", "{C7085260-3F28-49F7-A487-F5E57731137A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{FE46D067-8522-4724-B366-CD86BB5884EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE46D067-8522-4724-B366-CD86BB5884EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE46D067-8522-4724-B366-CD86BB5884EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7085260-3F28-49F7-A487-F5E57731137A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7085260-3F28-49F7-A487-F5E57731137A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7085260-3F28-49F7-A487-F5E57731137A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7085260-3F28-49F7-A487-F5E57731137A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A980C12B-D3AD-469B-9C06-579B12C0D1AC} = {C6429758-FE1B-42B8-987C-28EA831C67A7}

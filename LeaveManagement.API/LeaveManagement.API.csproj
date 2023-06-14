@@ -19,6 +19,7 @@
     <ProjectReference Include="..\LeaveManagement.Application\LeaveManagement.Application.csproj" />
     <ProjectReference Include="..\LeaveManagement.Persistence\LeaveManagement.Persistence.csproj" />
     <ProjectReference Include="..\LeaveManagement.Infrastructure\LeaveManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\LeaveManagement.Identity\LeaveManagement.Identity.csproj" />
   </ItemGroup>
 
 </Project>
