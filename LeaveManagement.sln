@@ -19,8 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Test", "Lea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Identity", "LeaveManagement.Identity\LeaveManagement.Identity.csproj", "{C7085260-3F28-49F7-A487-F5E57731137A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.MVC", "LeaveManagement.MVC\LeaveManagement.MVC.csproj", "{1A30109B-A2D2-4A8B-9A74-1D1553BC0241}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,10 +56,6 @@ Global
 		{C7085260-3F28-49F7-A487-F5E57731137A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7085260-3F28-49F7-A487-F5E57731137A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7085260-3F28-49F7-A487-F5E57731137A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A30109B-A2D2-4A8B-9A74-1D1553BC0241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A30109B-A2D2-4A8B-9A74-1D1553BC0241}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A30109B-A2D2-4A8B-9A74-1D1553BC0241}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A30109B-A2D2-4A8B-9A74-1D1553BC0241}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A980C12B-D3AD-469B-9C06-579B12C0D1AC} = {C6429758-FE1B-42B8-987C-28EA831C67A7}
