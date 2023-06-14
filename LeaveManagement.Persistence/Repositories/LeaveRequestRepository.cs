@@ -1,4 +1,4 @@
-using LeaveManagement.Application.Persistence.Contracts;
+using LeaveManagement.Application.Contracts.Persistence;
 using LeaveManagement.Domain;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,6 +23,14 @@ namespace LeaveManagement.Persistence.Repositories
     public async Task<List<LeaveRequest>> GetLeaveRequestsWithDetails()
     {
       var leaveRequests = await _dbContext.LeaveRequests
+          .Include(q => q.LeaveType)
+          .ToListAsync();
+      return leaveRequests;
+    }
+
+    public async Task<List<LeaveRequest>> GetLeaveRequestsWithDetails(string userId)
+    {
+      var leaveRequests = await _dbContext.LeaveRequests.Where(q => q.RequestingEmployeeId == userId)
           .Include(q => q.LeaveType)
           .ToListAsync();
       return leaveRequests;

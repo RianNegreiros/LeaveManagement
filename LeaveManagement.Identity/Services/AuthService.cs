@@ -1,6 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using LeaveManagement.Application.Constants;
 using LeaveManagement.Application.Contracts.Identity;
 using LeaveManagement.Application.Models.Identity;
 using LeaveManagement.Identity.Models;
@@ -111,7 +112,7 @@ namespace LeaveManagement.Identity.Services
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                new Claim("uid", user.Id)
+                new Claim(CustomClaimTypes.Uid, user.Id)
             }
       .Union(userClaims)
       .Union(roleClaims);

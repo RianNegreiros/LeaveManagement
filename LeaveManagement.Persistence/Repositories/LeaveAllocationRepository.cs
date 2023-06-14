@@ -1,4 +1,4 @@
-using LeaveManagement.Application.Persistence.Contracts;
+using LeaveManagement.Application.Contracts.Persistence;
 using LeaveManagement.Domain;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,9 +13,30 @@ namespace LeaveManagement.Persistence.Repositories
       _dbContext = dbContext;
     }
 
+    public async Task AddAllocations(List<LeaveAllocation> allocations)
+    {
+      await _dbContext.AddRangeAsync(allocations);
+      await _dbContext.SaveChangesAsync();
+    }
+
+    public async Task<bool> AllocationExists(string userId, int leaveTypeId, int period)
+    {
+      return await _dbContext.LeaveAllocations.AnyAsync(q => q.EmployeeId == userId
+                                  && q.LeaveTypeId == leaveTypeId
+                                  && q.Period == period);
+    }
+
     public async Task<List<LeaveAllocation>> GetLeaveAllocationsWithDetails()
     {
       var leaveAllocations = await _dbContext.LeaveAllocations
+         .Include(q => q.LeaveType)
+         .ToListAsync();
+      return leaveAllocations;
+    }
+
+    public async Task<List<LeaveAllocation>> GetLeaveAllocationsWithDetails(string userId)
+    {
+      var leaveAllocations = await _dbContext.LeaveAllocations.Where(q => q.EmployeeId == userId)
          .Include(q => q.LeaveType)
          .ToListAsync();
       return leaveAllocations;
@@ -28,6 +49,12 @@ namespace LeaveManagement.Persistence.Repositories
           .FirstOrDefaultAsync(q => q.Id == id);
 
       return leaveAllocation;
+    }
+
+    public async Task<LeaveAllocation> GetUserAllocations(string userId, int leaveTypeId)
+    {
+      return await _dbContext.LeaveAllocations.FirstOrDefaultAsync(q => q.EmployeeId == userId
+                                  && q.LeaveTypeId == leaveTypeId);
     }
   }
 }

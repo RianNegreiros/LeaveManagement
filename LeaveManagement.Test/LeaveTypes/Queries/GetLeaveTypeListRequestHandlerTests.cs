@@ -1,5 +1,4 @@
 using AutoMapper;
-using LeaveManagement.Application.Persistence.Contracts;
 using LeaveManagement.Application.DTOs.LeaveType;
 using LeaveManagement.Application.Features.LeaveTypes.Handlers.Queries;
 using LeaveManagement.Application.Features.LeaveTypes.Requests.Queries;
@@ -11,6 +10,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using LeaveManagement.Application.Contracts.Persistence;
 
 namespace LeaveManagement.Test.LeaveTypes.Queries
 {

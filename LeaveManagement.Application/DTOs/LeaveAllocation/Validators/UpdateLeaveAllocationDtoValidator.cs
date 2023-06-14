@@ -1,10 +1,5 @@
 using FluentValidation;
-using LeaveManagement.Application.Persistence.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+using LeaveManagement.Application.Contracts.Persistence;
 
 namespace LeaveManagement.Application.DTOs.LeaveAllocation.Validators
 {
